@@ -10,7 +10,6 @@ def Oblicz():
     global wyświetlaczStr1, wyświetlaczStr2, r1
     lewa_war= int(wyświetlaczStr1.get())
     prawa_war = int(wyświetlaczStr2.get())
-    print(lewa_war, prawa_war, r1.get()) #sprawdzam co otrzymuję
     if r1.get() == 0:
         wynik = lewa_war + prawa_war
     elif r1.get() == 1:
@@ -18,6 +17,7 @@ def Oblicz():
     elif r1.get() == 2:
         if prawa_war == 0:
             messagebox.showinfo("Błąd", "Nie można dzielić przez zero")
+            wyświetlacz2.focus_set()
             wynik = False
         else:
             wynik = lewa_war / prawa_war
