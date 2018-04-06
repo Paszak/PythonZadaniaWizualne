@@ -13,15 +13,11 @@ def licz():
     wynik.set(suma)
 
 
-def koniec():
-    okno.destroy()
-
-
 frame = Frame(okno)
 frame.pack()
 
 bottomframe = Frame(okno)
-bottomframe.pack(side = BOTTOM)
+bottomframe.pack(side=BOTTOM)
 
 prze7 = IntVar()
 prze6 = IntVar()
@@ -43,5 +39,5 @@ c1 = Checkbutton(frame, text="1", variable=prze1, command=licz).pack(side=LEFT)
 c0 = Checkbutton(frame, text="0", variable=prze0, command=licz).pack(side=LEFT)
 
 show = Label(bottomframe, textvariable=wynik, fg ="blue", font=("Arial", 36, "bold")).pack()
-przycisk = Button(bottomframe, text="Koniec", command=koniec).pack()
+przycisk = Button(bottomframe, text="Koniec", command=okno.destroy).pack()
 okno.mainloop()
