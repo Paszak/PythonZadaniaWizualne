@@ -61,9 +61,6 @@ wyświetlacz1 = Entry(okno, width=5, font=("Courier New", "12", "bold"), textvar
 wyświetlacz2 = Entry(okno, width=5, font=("Courier New", "12", "bold"), textvariable=wyświetlaczStr2, justify=LEFT)
 
 r1 = IntVar()
-r2 = IntVar()
-r3 = IntVar()
-r4 = IntVar()
 oblicz = Button(okno, text="Oblicz", command=Oblicz)
 dodawanie = Radiobutton(okno, text="+", variable=r1, value=0)
 odejmowanie = Radiobutton(okno, text="-", variable=r1, value=1)
