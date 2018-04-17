@@ -18,13 +18,16 @@ def Oblicz():
         if prawa_war == 0:
             messagebox.showinfo("Błąd", "Nie można dzielić przez zero")
             wyświetlacz2.focus_set()
-            wynik = False
+            wynik = 'brak'
         else:
             wynik = lewa_war / prawa_war
     elif r1.get() == 3:
         wynik = lewa_war * prawa_war
-    if wynik:
+    if wynik == 'brak':
+        return
+    else:
         messagebox.showinfo("Wynik", 'Wynikiem działania jest: ' + str(wynik))
+
 
 def tylkocyfry(*a):
     global wyświetlaczStr1, pop_s1
